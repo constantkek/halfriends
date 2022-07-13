@@ -1,17 +1,14 @@
+import { fetchAll } from '@/utils/setup/created';
 import Vue from 'vue';
 import Vuex from 'vuex';
+import { eventStore } from './eventStore';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+export const store = new Vuex.Store({
   modules: {
+    eventStore,
   },
 });
+
+fetchAll();

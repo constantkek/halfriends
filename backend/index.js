@@ -11,6 +11,11 @@ const ROUTES = {
 };
 
 app.use(express.json());
+app.use(cors({
+  origin: '*',
+  credentials: true,
+  optionSuccessStatus: 200,
+}));
 
 // routes
 app.use(ROUTES.events, events);
