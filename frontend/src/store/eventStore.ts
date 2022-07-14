@@ -12,6 +12,10 @@ export enum EventStoreAction {
 	fetch = 'fetch',
 }
 
+export enum EventStoreGetter {
+	events = 'events',
+}
+
 const enum Mutation {
 	setEvents = 'setEvents',
 }
@@ -24,7 +28,9 @@ const actions = {
 };
 
 const getters = {
-
+	events: (state: EventStoreState) => () => {
+		return state.events;
+	}
 };
 
 const mutations = {

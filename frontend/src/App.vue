@@ -1,22 +1,41 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link
-        to="/"
-        replace
+    <el-menu
+      :default-active="activeIndex"
+      class="el-menu-demo"
+      mode="horizontal"
+    >
+      <el-menu-item
+        index="1"
+        default-active
       >
-        Home
-      </router-link> |
-      <router-link
-        to="/about"
-        replace
+        <router-link
+          to="/"
+          replace
+        >
+          Events
+        </router-link>
+      </el-menu-item>
+      <el-menu-item
+        index="2"
+        disabled
       >
-        About
-      </router-link>
-    </nav>
+        Profile
+      </el-menu-item>
+    </el-menu>
     <router-view />
   </div>
 </template>
+
+<script lang="ts">
+export default {
+  data() {
+    return {
+      activeIndex: '1',
+    };
+  },
+}
+</script>
 
 <style>
 #app {

@@ -4,4 +4,4 @@ export interface Item {
 	status: ItemStatus,
 }
 
-type ItemStatus = 'created' | 'in progress' | 'paid';
+export type ItemStatus = 'created' | 'in progress' | 'paid';
