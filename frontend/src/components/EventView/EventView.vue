@@ -1,6 +1,6 @@
 <template>
   <el-col
-    span="8"
+    :span="8"
     class="event-view__container"
   >
     <el-card class="event-view__card">
