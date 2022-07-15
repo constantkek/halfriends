@@ -21,9 +21,7 @@ export default class HelloWorld extends Vue {
   public events: Event[] = [];
 
   private created(): void {
-    console.log(this.$store.state.eventStore);
     this.events = this.$store.state.eventStore.events;
-    
   }
 
 }
