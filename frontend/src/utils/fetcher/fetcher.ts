@@ -1,5 +1,3 @@
-import { BASE_URL } from "@/config/config";
-
 export const fetcher = {
 	get: async<T>(url: string): Promise<T> => {
 		return fetch(url, {
@@ -8,7 +6,7 @@ export const fetcher = {
 			cache: 'no-cache',
 			headers: {
 				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': BASE_URL,
+				'Access-Control-Allow-Origin': process.env.BASE_URL,
 			},
 		}).then(response => response.json());
 	},
@@ -19,7 +17,7 @@ export const fetcher = {
 			cache: 'no-cache',
 			headers: {
 				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': BASE_URL,
+				'Access-Control-Allow-Origin': process.env.BASE_URL,
 			},
 			body: JSON.stringify(data),
 		}).then(response => response.json());
