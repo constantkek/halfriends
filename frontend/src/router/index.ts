@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
-import EventsView from '../views/EventsView.vue';
-import AboutView from '../views/AboutView.vue';
+import EventsListView from '@/views/EventsListView.vue';
+import EventView from '@/views/EventView.vue';
 
 Vue.use(VueRouter);
 
@@ -9,12 +9,13 @@ const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'events',
-    component: EventsView,
+    component: EventsListView,
   },
   {
-    path: '/about',
-    name: 'about',
-    component: AboutView,
+    path: '/event/:id',
+    name: 'event',
+    component: EventView,
+    props: true,
   },
 ];
 

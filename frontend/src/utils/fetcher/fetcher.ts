@@ -1,4 +1,4 @@
-import { BASE_URL } from "@/config/config";
+import { BASE_URL } from '@/config/config';
 
 export const fetcher = {
 	get: async<T>(url: string): Promise<T> => {

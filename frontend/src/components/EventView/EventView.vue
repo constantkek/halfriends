@@ -3,15 +3,19 @@
     :span="8"
     class="event-view__container"
   >
-    <el-card class="event-view__card">
-      <template #header>
-        <div class="event-view__header">
-          <span>{{ event.name }}</span>
-          <strong style="float: right">{{ getOverall(event).toLocaleString() }} ₽</strong>
-        </div>
-      </template>
-      <ItemsCompactView :items="items" />
-    </el-card>
+    <router-link
+      :to="`/event/${event.id}`"
+    >
+      <el-card class="event-view__card">
+        <template #header>
+          <div class="event-view__header">
+            <span>{{ event.name }}</span>
+            <strong style="float: right">{{ getOverall(event).toLocaleString() }} ₽</strong>
+          </div>
+        </template>
+        <ItemsCompactView :items="items" />
+      </el-card>
+    </router-link>
   </el-col>
 </template>
 

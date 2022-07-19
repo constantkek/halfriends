@@ -5,15 +5,15 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 import App from '@/App.vue';
 import router from '@/router';
-import { EventStoreAction } from '@/store/eventStore/actions';
 import { store } from '@/store';
+import { eventStore } from './store/eventStore';
 
 Vue.config.productionTip = false;
 
 Vue.use(ElementUI);
 
 const fetchAll = async () => {
-	await store.dispatch(`eventStore/${EventStoreAction.fetch}`);
+	await eventStore.fetch();
 };
 
 fetchAll().then(() => {

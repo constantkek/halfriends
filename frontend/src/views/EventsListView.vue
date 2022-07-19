@@ -4,19 +4,21 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { Getter } from 'vuex-class';
 
 import { Event } from '@/schema/Event';
-import { EventStoreGetter } from '@/store/eventStore/getters';
 import EventsList from '@/components/EventsList/EventsList.vue';
+import { eventStore } from '@/store/eventStore';
 
 @Component({
   components: {
     EventsList,
   },
 })
-export default class EventsView extends Vue {
-  @Getter(EventStoreGetter.events, { namespace: 'eventStore' })
+export default class EventsListView extends Vue {
   public events!: Event[];
+
+  private created(): void {
+    this.events = eventStore.events;
+  }
 }
 </script>
