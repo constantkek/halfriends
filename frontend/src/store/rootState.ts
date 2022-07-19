@@ -1,4 +1,4 @@
-import { EventStoreState } from "./eventStore/eventState";
+import { EventStoreState } from '@/store/eventStore/eventState';
 
 export interface RootState {
   version: string;

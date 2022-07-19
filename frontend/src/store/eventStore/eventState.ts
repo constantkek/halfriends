@@ -1,4 +1,4 @@
-import { Event } from "@/schema/Event";
+import { Event } from '@/schema/Event';
 
 export interface EventStoreState {
 	events: Event[],
