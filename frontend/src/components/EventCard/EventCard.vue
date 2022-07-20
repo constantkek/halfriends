@@ -14,25 +14,33 @@
           </div>
         </template>
         <ItemsCompactView :items="items" />
+        <UsersCompactView :users="users" />
       </el-card>
     </router-link>
   </el-col>
 </template>
 
 <script lang="ts">
-import { Event } from '@/schema/Event';
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import ItemsCompactView from '@/components/ItemsCompactView/ItemsCompactView.vue';
+import { Event } from '@/schema/Event';
 import { Item } from '@/schema/Item';
+import { Participant } from '@/schema/Participant';
+import ItemsCompactView from '@/components/EventCard/ItemsCompactView/ItemsCompactView.vue';
+import UsersCompactView from '@/components/EventCard/UsersCompactView/UsersCompactView.vue';
 
 @Component({
   components: {
     ItemsCompactView,
+    UsersCompactView,
   },
 })
 export default class EventView extends Vue {
   @Prop()
   public event!: Event;
+
+  public get users(): Participant[] {
+    return this.event.participants;
+  }
 
   public get items(): Item[] {
     return this.event.items;
