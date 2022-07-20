@@ -5,8 +5,8 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
-import { Event } from '@/schema/Event';
-import { eventStore } from '@/store/eventStore';
+import { Event } from '../schema/Event';
+import { eventStore } from '../store/eventStore';
 import EventsList from '@/components/EventsList/EventsList.vue';
 
 @Component({

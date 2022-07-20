@@ -32,13 +32,13 @@ export default class EventsList extends Vue {
   @Prop({ default: false })
   public value!: boolean;
 
-  private eventName = '';
+  public eventName = '';
 
-  private close(value: boolean): void {
+  public close(value: boolean): void {
     this.$emit('input', value)
   }
 
-  private create(): void {
+  public create(): void {
     this.$emit('created', this.eventName);
     this.eventName = '';
   }
