@@ -1,13 +1,21 @@
 <template>
   <div>
-    <el-tag
+    <span
       v-for="item in slicedItems"
       :key="item.name"
-      :type="getType(item.status)"
-      class="items-compact-view__tag"
     >
-      {{ item.name }} • {{ item.price }} ₽
-    </el-tag>
+      <el-tooltip
+        :content="item.status"
+        placement="top"
+      >
+        <el-tag
+          :type="getType(item.status)"
+          class="items-compact-view__tag"
+        >
+          {{ item.name }} • {{ item.price }} ₽
+        </el-tag>
+      </el-tooltip>
+    </span>
     <span v-if="items.length > limit">
       and {{ items.length - limit }} more..
     </span>
