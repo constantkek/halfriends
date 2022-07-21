@@ -2,7 +2,6 @@
   <div id="app">
     <el-menu
       :default-active="activeIndex"
-      class="el-menu-demo"
       mode="horizontal"
     >
       <el-menu-item
@@ -38,6 +37,11 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: #fbfcff;
+  margin: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
