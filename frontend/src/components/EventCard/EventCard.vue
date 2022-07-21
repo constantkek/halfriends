@@ -8,7 +8,7 @@
     >
       <el-card class="event-view__card">
         <template #header>
-          <div class="event-view__header">
+          <div>
             <span>{{ event.name }}</span>
             <strong style="float: right">{{ getOverall(event).toLocaleString() }} ₽</strong>
           </div>
