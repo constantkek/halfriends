@@ -62,10 +62,13 @@ export default class EventView extends Vue {
   @Prop()
   public id!: number;
 
-  public event?: Event;
+  public event!: Event;
 
   private created(): void {
     this.event = eventStore.event(this.id);
+    if (!this.event) {
+      throw new Error('Event must be defined');
+    }
   }
 
   public goBack(): void {

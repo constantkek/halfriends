@@ -23,21 +23,21 @@
 </template>
 
 <script lang="ts">
-import { Item, ItemStatus } from '@/schema/Item';
+import { Product, ProductStatus } from '@/schema/Product';
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class ItemsCompactView extends Vue {
   @Prop({ default: [] })
-  public readonly items!: Item[];
+  public readonly items!: Product[];
 
   public readonly limit = 3;
 
-  public get slicedItems(): Item[] {
+  public get slicedItems(): Product[] {
     return this.items.slice(0, this.limit);
   }
 
-  public getType(status: ItemStatus): string {
+  public getType(status: ProductStatus): string {
     switch (status) {
       case 'created':
         return 'info';

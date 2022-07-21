@@ -1,11 +1,11 @@
-import { Item } from '@/schema/Item';
-import { Participant } from '@/schema/Participant';
+import { Product } from '@/schema/Product';
+import { User } from '@/schema/User';
 
 export interface Event {
 	id: string,
 	name: string,
 	isActive: boolean,
 	description: string,
-	items: Item[],
-	participants: Participant[],
+	products: Product[],
+	users: User[],
 }

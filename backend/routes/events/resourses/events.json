@@ -4,7 +4,7 @@
     "isActive": false,
     "name": "Skyplex",
     "description": "Nulla eu sit pariatur incididunt in officia sunt labore aliquip qui elit irure. Ullamco mollit ipsum irure non ea proident fugiat. Aliquip dolor minim ex ipsum culpa pariatur ex labore culpa est. Lorem duis qui anim proident duis consequat occaecat commodo. Sit velit et dolor excepteur ad sunt pariatur nisi. Dolore enim eiusmod voluptate amet culpa elit est adipisicing reprehenderit amet ipsum eu mollit. Cupidatat occaecat consequat ipsum voluptate quis ut.\r\n",
-    "items": [
+    "products": [
       {
         "name": "veniam",
         "price": 735,
@@ -26,7 +26,7 @@
         "status": "paid"
       }
     ],
-    "participants": [
+    "users": [
       {
         "firstname": "Lambert",
         "lastname": "Nichols"
@@ -58,7 +58,7 @@
     "isActive": false,
     "name": "Norali",
     "description": "Est qui duis laborum laboris sit adipisicing esse aliquip laboris esse. Officia proident dolore nulla Lorem consectetur consectetur adipisicing veniam. Commodo culpa aute adipisicing fugiat. Ea dolore Lorem labore voluptate labore sint sint do sunt.\r\n",
-    "items": [
+    "products": [
       {
         "name": "sunt",
         "price": 738,
@@ -75,7 +75,7 @@
         "status": "paid"
       }
     ],
-    "participants": [
+    "users": [
       {
         "firstname": "Lana",
         "lastname": "Alston"
@@ -99,7 +99,7 @@
     "isActive": true,
     "name": "Zosis",
     "description": "Minim dolor anim pariatur ipsum dolor proident ullamco ex ea. Mollit id excepteur ipsum fugiat adipisicing. Veniam eiusmod pariatur esse incididunt aute excepteur cupidatat duis aliquip id. Et minim non et consectetur occaecat laboris in sunt in. Eu dolore excepteur pariatur aliquip magna excepteur aute. Commodo ex do id sunt consequat minim deserunt dolor velit.\r\n",
-    "items": [
+    "products": [
       {
         "name": "aliqua",
         "price": 260,
@@ -116,7 +116,7 @@
         "status": "in progress"
       }
     ],
-    "participants": [
+    "users": [
       {
         "firstname": "Long",
         "lastname": "Leach"

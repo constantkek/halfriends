@@ -23,8 +23,8 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { Event } from '@/schema/Event';
-import { Item } from '@/schema/Item';
-import { Participant } from '@/schema/Participant';
+import { Product } from '@/schema/Product';
+import { User } from '@/schema/User';
 import ItemsCompactView from '@/components/EventCard/ItemsCompactView/ItemsCompactView.vue';
 import UsersCompactView from '@/components/EventCard/UsersCompactView/UsersCompactView.vue';
 
@@ -38,17 +38,17 @@ export default class EventView extends Vue {
   @Prop()
   public event!: Event;
 
-  public get users(): Participant[] {
-    return this.event.participants;
+  public get users(): User[] {
+    return this.event.users;
   }
 
-  public get items(): Item[] {
-    return this.event.items;
+  public get items(): Product[] {
+    return this.event.products;
   }
 
   public getOverall(event: Event): number {
-    return event.items.reduce((acc: number, item) => {
-      return acc + item.price;
+    return event.products.reduce((acc: number, product) => {
+      return acc + product.price;
     }, 0);
   }
 }

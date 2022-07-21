@@ -14,17 +14,17 @@
 </template>
 
 <script lang="ts">
-import { Participant } from '@/schema/Participant';
+import { User } from '@/schema/User';
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class UsersCompactView extends Vue {
   @Prop({ default: () => [] })
-  public readonly users!: Participant[];
+  public readonly users!: User[];
 
   public readonly limit = 9;
 
-  public get slicedUsers(): Participant[] {
+  public get slicedUsers(): User[] {
     return this.users.slice(0, this.limit);
   }
 }
