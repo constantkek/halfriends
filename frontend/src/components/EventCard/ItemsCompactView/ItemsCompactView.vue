@@ -31,7 +31,7 @@ export default class ItemsCompactView extends Vue {
   @Prop({ default: [] })
   public readonly items!: Product[];
 
-  public readonly limit = 3;
+  public readonly limit = 5;
 
   public get slicedItems(): Product[] {
     return this.items.slice(0, this.limit);
