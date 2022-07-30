@@ -51,8 +51,8 @@ export default class UsersCompactView extends Vue {
 
 <style scoped>
 .user-compact-view__container {
-  margin: 5px;
-  margin-left: 12px;
+  margin: 5px 12px 0 12px;
+  height: 34px;
 }
 .avatar {
   border: 2px solid white;

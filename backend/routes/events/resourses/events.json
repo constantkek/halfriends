@@ -8,130 +8,69 @@
       {
         "name": "veniam",
         "price": 735,
-        "status": "paid"
+        "status": "paid",
+        "authorId": "301",
+        "userIds": ["300"]
       },
       {
         "name": "enim",
         "price": 659,
-        "status": "created"
+        "status": "created",
+        "authorId": "305",
+        "userIds": ["300", "301"]
       },
       {
         "name": "dolore",
         "price": 777,
-        "status": "in progress"
+        "status": "in progress",
+        "authorId": "304",
+        "userIds": ["301", "303"]
       },
       {
         "name": "goglinob",
         "price": 741,
-        "status": "paid"
+        "status": "paid",
+        "authorId": "301",
+        "userIds": ["302", "303", "304"]
+      },
+      {
+        "name": "penolbat",
+        "price": 981,
+        "status": "created",
+        "authorId": "302",
+        "userIds": ["300", "301", "304"]
       }
     ],
     "users": [
       {
-        "firstname": "Lambert",
-        "lastname": "Nichols"
+        "id": "300",
+        "firstname": "Egor",
+        "lastname": "Muratov"
       },
       {
-        "firstname": "Greer",
-        "lastname": "Finley"
+        "id": "301",
+        "firstname": "Sergey",
+        "lastname": "Tynyanov"
       },
       {
-        "firstname": "Coffey",
-        "lastname": "Flores"
+        "id": "302",
+        "firstname": "Kostya",
+        "lastname": "Klet"
       },
       {
-        "firstname": "Vera",
-        "lastname": "Mckee"
+        "id": "303",
+        "firstname": "Maria",
+        "lastname": "Kapridova"
       },
       {
-        "firstname": "Spev",
-        "lastname": "Mulla"
+        "id": "304",
+        "firstname": "Anna",
+        "lastname": "Serebryakova"
       },
       {
-        "firstname": "Hart",
-        "lastname": "Nubder"
-      }
-    ]
-  },
-  {
-    "id": "62cff2026ea18a291154948c",
-    "isActive": false,
-    "name": "Norali",
-    "description": "Est qui duis laborum laboris sit adipisicing esse aliquip laboris esse. Officia proident dolore nulla Lorem consectetur consectetur adipisicing veniam. Commodo culpa aute adipisicing fugiat. Ea dolore Lorem labore voluptate labore sint sint do sunt.\r\n",
-    "products": [
-      {
-        "name": "sunt",
-        "price": 738,
-        "status": "paid"
-      },
-      {
-        "name": "dolore",
-        "price": 787,
-        "status": "paid"
-      },
-      {
-        "name": "ea",
-        "price": 534,
-        "status": "paid"
-      }
-    ],
-    "users": [
-      {
-        "firstname": "Lana",
-        "lastname": "Alston"
-      },
-      {
-        "firstname": "Campbell",
-        "lastname": "Sandoval"
-      },
-      {
-        "firstname": "Roach",
-        "lastname": "Yates"
-      },
-      {
-        "firstname": "Francine",
-        "lastname": "Compton"
-      }
-    ]
-  },
-  {
-    "id": "62cff2021ca2c2b86516b046",
-    "isActive": true,
-    "name": "Zosis",
-    "description": "Minim dolor anim pariatur ipsum dolor proident ullamco ex ea. Mollit id excepteur ipsum fugiat adipisicing. Veniam eiusmod pariatur esse incididunt aute excepteur cupidatat duis aliquip id. Et minim non et consectetur occaecat laboris in sunt in. Eu dolore excepteur pariatur aliquip magna excepteur aute. Commodo ex do id sunt consequat minim deserunt dolor velit.\r\n",
-    "products": [
-      {
-        "name": "aliqua",
-        "price": 260,
-        "status": "created"
-      },
-      {
-        "name": "magna",
-        "price": 732,
-        "status": "created"
-      },
-      {
-        "name": "excepteur",
-        "price": 199,
-        "status": "in progress"
-      }
-    ],
-    "users": [
-      {
-        "firstname": "Long",
-        "lastname": "Leach"
-      },
-      {
-        "firstname": "Rosanne",
-        "lastname": "Mcintosh"
-      },
-      {
-        "firstname": "Guy",
-        "lastname": "Glenn"
-      },
-      {
-        "firstname": "Farmer",
-        "lastname": "Cross"
+        "id": "305",
+        "firstname": "Sardana",
+        "lastname": "Grigorieva"
       }
     ]
   }
