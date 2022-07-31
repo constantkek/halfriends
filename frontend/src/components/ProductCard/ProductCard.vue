@@ -63,6 +63,7 @@ export default class ProductCard extends Vue {
 }
 .product-card__inner-section {
   display: inline-flex;
+  gap: 5px;
   .inner-king {
     display: flex;
     flex-direction: column;
