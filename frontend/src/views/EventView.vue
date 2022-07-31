@@ -50,6 +50,7 @@
         v-for="product in event.products"
         :key="product.name"
         :product="product"
+        :eventId="id"
       />
     </section>
   </div>

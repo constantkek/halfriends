@@ -12,7 +12,6 @@ export const eventStoreModule: Module<EventStoreState, RootState> = {
 	namespaced: true,
 	state: {
 		events: [],
-		activeEvent: undefined,
 	},
 	getters,
 	mutations,
@@ -24,6 +23,7 @@ const builder = new ModuleBuilder(store, eventStoreModule, 'eventStore');
 export const eventStore = builder.build({
 	events: builder.getter(getters.events),
 	event: builder.getter(getters.event),
+	eventUsers: builder.getter(getters.eventUsers),
 
 	fetch: builder.action(actions.fetch),
 })
