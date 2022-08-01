@@ -22,7 +22,10 @@
             <i class="el-icon-back arrow"></i>
             <el-divider direction="vertical" class="divider"></el-divider>
           </div>
-          <div class="inner-users"></div>
+          <div class="inner-users">
+            <i class="el-icon-present"></i>
+            <UsersCompactView :users="payers" :limit="4" />
+          </div>
         </div>
       </el-card>
     </el-col>
@@ -38,10 +41,12 @@ import { User } from '@/schema/User';
 import { eventStore } from '@/store/eventStore';
 
 import UserAvatarView from '@/components/EventCard/UserAvatarView/UserAvatarView.vue';
+import UsersCompactView from '@/components/EventCard/UsersCompactView/UsersCompactView.vue';
 
 @Component({
   components: {
     UserAvatarView,
+    UsersCompactView,
   }
 })
 export default class ProductCard extends Vue {
@@ -51,8 +56,16 @@ export default class ProductCard extends Vue {
   @Prop()
   public eventId!: string;
 
+  private get eventUsers(): User[] {
+    return eventStore.eventUsers(this.eventId);
+  }
+
   public get author(): User | undefined {
-    return eventStore.eventUsers(this.eventId).find((user: User) => user.id === this.product.authorId);
+    return this.eventUsers.find((user: User) => user.id === this.product.authorId);
+  }
+
+  public get payers(): User[] {
+    return this.eventUsers.filter((user: User) => this.product.userIds.includes(user.id));
   }
 }
 </script>
