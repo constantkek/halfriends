@@ -15,7 +15,7 @@
           <div class="inner_header">
             <img src="@/assets/crown.svg?data" />
             <i class="el-icon-back"></i>
-            <i class="el-icon-present gift"></i>
+            <i class="el-icon-money money"></i>
           </div>
           <div class="inner-content">
             <div class="avatar-view">
@@ -74,34 +74,34 @@ export default class ProductCard extends Vue {
 }
 .product-card__inner-section {
   display: inline-flex;
-  gap: 5px;
+  gap: 7px;
   flex-direction: column;
   .inner_header {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 2px;
     img {
       width: 34px;
       height: 24px;
     }
     i {
       font-weight: 600;
-      font-size: 1.3em;
-      &.gift {
-        margin-top: -2px;
-        margin-left: 5px;
+      font-size: 1.4em;
+      &.money {
+        margin-left: 4px;
       }
     }
   }
   .inner-content {
     display: flex;
-    gap: 5px;
+    gap: 2px;
     align-items: center;
     .avatar-view {
       display: flex;
     }
     .divider {
       height: 26px;
+      margin: 0 10px;
     }
     .users-compact-view {
       display: flex;
