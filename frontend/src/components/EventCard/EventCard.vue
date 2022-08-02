@@ -14,7 +14,7 @@
           </div>
         </template>
         <ItemsCompactView :items="items" />
-        <UsersCompactView :users="users" />
+        <UsersCompactView class="user-compact-view" :users="users" />
       </el-card>
     </router-link>
   </el-col>
@@ -61,5 +61,11 @@ export default class EventView extends Vue {
 .event-view__card {
   text-align: left;
   cursor: pointer;
+}
+
+.user-compact-view {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
 }
 </style>

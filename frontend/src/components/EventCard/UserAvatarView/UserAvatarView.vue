@@ -45,7 +45,7 @@ export default class UserAvatarView extends Vue {
   font-size: 11px;
   font-weight: 600;
 }
-.avatar:only-child {
+.avatar:first-child {
 	margin: 0;
 }
 .avatar>div {

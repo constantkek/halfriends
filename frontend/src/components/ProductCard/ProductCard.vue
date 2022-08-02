@@ -12,19 +12,17 @@
           </div>
         </template>
         <div class="product-card__inner-section">
-          <div class="inner-king">
+          <div class="inner_header">
             <img src="@/assets/crown.svg?data" />
+            <i class="el-icon-back"></i>
+            <i class="el-icon-present gift"></i>
+          </div>
+          <div class="inner-content">
             <div class="avatar-view">
               <UserAvatarView :user="author" />
             </div>
-          </div>
-          <div class="inner-divider">
-            <i class="el-icon-back arrow"></i>
             <el-divider direction="vertical" class="divider"></el-divider>
-          </div>
-          <div class="inner-users">
-            <i class="el-icon-present"></i>
-            <UsersCompactView :users="payers" :limit="4" />
+            <UsersCompactView class="users-compact-view" :users="payers" :limit="4" />
           </div>
         </div>
       </el-card>
@@ -77,35 +75,37 @@ export default class ProductCard extends Vue {
 .product-card__inner-section {
   display: inline-flex;
   gap: 5px;
-  .inner-king {
+  flex-direction: column;
+  .inner_header {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 5px;
     img {
-      width: 24px;
+      width: 34px;
       height: 24px;
     }
+    i {
+      font-weight: 600;
+      font-size: 1.3em;
+      &.gift {
+        margin-top: -2px;
+        margin-left: 5px;
+      }
+    }
+  }
+  .inner-content {
+    display: flex;
+    gap: 5px;
+    align-items: center;
     .avatar-view {
       display: flex;
     }
-  }
-  .inner-divider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    .arrow {
-      margin-top: 3px;
-      font-size: larger;
-      font-weight: bold;
-    }
     .divider {
-      height: 34px;
+      height: 26px;
     }
-  }
-  .inner-users {
-
+    .users-compact-view {
+      display: flex;
+    }
   }
 }
 </style>

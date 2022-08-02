@@ -1,5 +1,5 @@
 <template>
-  <div class="user-compact-view__container">
+  <div>
     <UserAvatarView
       v-for="(user, index) in slicedUsers"
       :key="index"
@@ -39,11 +39,6 @@ export default class UsersCompactView extends Vue {
 </script>
 
 <style scoped>
-.user-compact-view__container {
-  display: flex;
-  align-items: center;
-  margin: 5px 12px 0 12px;
-}
 .user-compact-view_span {
   display: flex;
 }
