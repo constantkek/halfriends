@@ -46,6 +46,12 @@
     <el-divider />
     <section class="event-view__products">
       <h1>Products</h1>
+      <ProductCard
+        v-for="product in event.products"
+        :key="product.name"
+        :product="product"
+        :eventId="id"
+      />
     </section>
   </div>
 </template>
@@ -56,8 +62,13 @@ import Vue from 'vue';
 import { Event } from '@/schema/Event';
 import { Component, Prop } from 'vue-property-decorator';
 import { eventStore } from '@/store/eventStore';
+import ProductCard from '@/components/ProductCard/ProductCard.vue'
 
-@Component
+@Component({
+  components: {
+    ProductCard,
+  }
+})
 export default class EventView extends Vue {
   @Prop()
   public id!: number;
